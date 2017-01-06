@@ -5,6 +5,7 @@
 !.Xresources
 !.alsoftrc
 !.asoundrc
+!bin/
 
 !.vim/
 .vim/*
