@@ -1,0 +1,9 @@
+style "darktree" {
+   base[NORMAL] = "#353945"
+   base[ACTIVE] = "#3d87dc"
+   text[NORMAL] = "#cccccc"
+   text[ACTIVE] = "#ffffff"
+}
+
+widget "whiskermenu-window*TreeView*" style "darktree"
+gtk-auto-mnemonic=0
