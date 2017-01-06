@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!.zshenv
 !.zshrc
 !.gtkrc-2.0
 !.Xresources

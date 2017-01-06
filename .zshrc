@@ -9,7 +9,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$HOME/bin:$PATH"
 export TERM=xterm-256color
 export EDITOR=vim
 export VISUAL="emacsclient -c"
