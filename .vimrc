@@ -36,7 +36,7 @@ NeoBundleCheck
 
 " vim-airline
 set laststatus=2
-let g:airline_theme='kolor'
+let g:airline_theme='nord'
 let g:airline#extensions#whitespace#enabled = 0
 
 " NERDTree

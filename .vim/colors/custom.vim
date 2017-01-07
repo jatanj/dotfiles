@@ -9,7 +9,7 @@ endif
 let g:colors_name = "custom"
 
 hi Cursor ctermfg=139 ctermbg=0 cterm=NONE guifg=#333842 guibg=#ffffff gui=NONE
-hi Visual ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#3d4148 gui=NONE
+hi Visual ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#282c34 gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#474b54 gui=NONE
 hi CursorColumn ctermfg=NONE ctermbg=237 cterm=NONE guifg=NONE guibg=#474b54 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=0 cterm=NONE guifg=NONE guibg=#474b54 gui=NONE
@@ -21,7 +21,7 @@ hi StatusLineNC ctermfg=231 ctermbg=60 cterm=NONE guifg=#f8f8f8 guibg=#6c7077 gu
 hi Pmenu ctermfg=231 ctermbg=0 cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE
 hi PmenuSel ctermfg=NONE ctermbg=0 cterm=NONE guifg=NONE guibg=#4c4f54 gui=NONE
 hi IncSearch ctermfg=139 ctermbg=139 cterm=NONE guifg=#000000 guibg=#66a9d4 gui=NONE
-hi Search ctermfg=NONE ctermbg=139 cterm=underline guifg=NONE guibg=#3d4148 gui=underline
+hi Search ctermfg=NONE ctermbg=139 cterm=underline guifg=NONE guibg=#282c34 gui=underline
 hi Directory ctermfg=141 ctermbg=0 cterm=NONE guifg=#ac92ec guibg=NONE gui=NONE
 hi Folded ctermfg=102 ctermbg=0 cterm=NONE guifg=#767f8c guibg=#333842 gui=NONE
 hi LineNr ctermfg=015 ctermbg=NONE cterm=NONE guifg=#4c566a guibg=NONE gui=NONE
@@ -36,7 +36,7 @@ hi DiffAdd ctermfg=231 ctermbg=NONE cterm=bold guifg=#f8f8f8 guibg=#498612 gui=b
 hi DiffDelete ctermfg=88 ctermbg=NONE cterm=NONE guifg=NONE guibg=#663333 gui=NONE
 hi DiffChange ctermfg=231 ctermbg=NONE cterm=NONE guifg=NONE guibg=#336633 gui=NONE
 hi DiffText ctermfg=231 ctermbg=NONE cterm=bold guifg=NONE guibg=NONE gui=bold
-hi ErrorMsg ctermfg=231 ctermbg=NONE cterm=NONE guifg=#bf616a guibg=NONE gui=NONE
+hi ErrorMsg ctermfg=231 ctermbg=NONE cterm=NONE guifg=#bf616a  guibg=NONE gui=NONE
 hi WarningMsg ctermfg=231 ctermbg=NONE cterm=NONE guifg=#ffff00 guibg=NONE gui=NONE
 hi Float ctermfg=113 ctermbg=NONE cterm=NONE guifg=#87d75f guibg=NONE gui=NONE
 hi Function ctermfg=231 ctermbg=NONE cterm=NONE guifg=#f8f8f8 guibg=NONE gui=NONE

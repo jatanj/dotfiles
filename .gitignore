@@ -8,10 +8,17 @@
 !.asoundrc
 !bin/
 
+!.vimrc
 !.vim/
 .vim/*
-!.vimrc
 !.vim/colors/
+!.vim/autoload/
+.vim/autoload/*
+!.vim/autoload/airline/
+.vim/autoload/airline/*
+!.vim/autoload/airline/themes/
+.vim/autoload/airline/themes/*
+!.vim/autoload/airline/themes/nord.vim
 
 !.config/
 .config/*
