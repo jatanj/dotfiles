@@ -23,6 +23,3 @@
 !.config/
 .config/*
 !.config/compton.conf
-!.config/xfce4/
-.config/xfce4/*
-!.config/xfce4/terminal
