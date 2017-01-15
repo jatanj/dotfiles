@@ -17,12 +17,11 @@ export SUDO_EDITOR="emacsclient -c"
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/Develop'
 
-alias chrome='chromium --start-maximized'
-
-alias sound='alsamixer'
-alias duh='du -h --max-depth=1'
-alias egrep="egrep --color"
-alias pacman-prune='sudo pacman -Rns $(pacman -Qtdq)'
+alias sound="alsamixer"
+alias cpu-freq="watch -n 0 'lscpu | grep MHz'"
+alias cpu-temp="watch -n 0 'sensors'"
+alias file-size="du -h --max-depth=1"
+alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq)"
 
 # Git aliases
 alias gs="git status"
@@ -34,7 +33,7 @@ function ec() {
 }
 
 function whichg() {
-	thunar $(dirname $(where "$1"))
+	thunar $(dirname $(which "$1"))
 }
 
 # Disable terminal scroll lock
@@ -42,9 +41,6 @@ stty -ixon
 
 # Fix VTE configuration issues
 source /etc/profile.d/vte.sh
-
-# Keychain
-eval `keychain --eval --quiet --noask --agents ssh id_rsa`
 
 # Start in develop directory
 develop
