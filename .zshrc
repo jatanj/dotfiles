@@ -16,11 +16,10 @@ export SUDO_EDITOR="emacsclient -c"
 
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/Develop'
-
 alias sound="alsamixer"
 alias cpu-freq="watch -n 0 'lscpu | grep MHz'"
 alias cpu-temp="watch -n 0 'sensors'"
-alias file-size="du -h --max-depth=1"
+alias dir-sizes="du -h --max-depth=1"
 alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq)"
 
 # Git aliases

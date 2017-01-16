@@ -1,5 +1,6 @@
 /*
 !.gitignore
+!.gitconfig
 !.zshenv
 !.zshrc
 !.gtkrc-2.0

@@ -1,0 +1,6 @@
+[user]
+	name = Jatan Patel
+	email = jjpatel2@outlook.com
+[alias]
+	amend = commit --amend
+	stat = diff --stat
