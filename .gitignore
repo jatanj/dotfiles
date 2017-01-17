@@ -21,6 +21,10 @@
 .vim/autoload/airline/themes/*
 !.vim/autoload/airline/themes/nord.vim
 
+!.themes/
+.themes/*
+!.themes/Fjord/
+
 !.config/
 .config/*
 !.config/compton.conf

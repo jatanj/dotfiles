@@ -1,4 +1,5 @@
 export ZSH=/home/J/.oh-my-zsh
+DISABLE_AUTO_UPDATE="true"
 
 # Theme
 PURE_PROMPT_SYMBOL='$'
