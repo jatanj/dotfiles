@@ -19,6 +19,8 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'tpope/vim-commentary'
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'ap/vim-buftabline'
@@ -59,7 +61,6 @@ set backspace=indent,eol,start
 set t_Co=256
 colorscheme custom
 
-" General settings
 syntax on
 set mouse=a
 set number
@@ -67,32 +68,32 @@ set clipboard=unnamedplus
 set hidden
 set nowrap
 set sidescroll=1
+set tabstop=2
+set shiftwidth=2
+set noexpandtab
 
-" General keybindings
 nmap <BS> d<Left>
-imap <C-g> <Esc>
+nmap <C-g> <Esc>
+vmap <C-g> <Esc>
+nmap <C-_> gcc
+vmap <C-_> gc
+map <S-Up> 10k
+map <S-Down> 10j
+map <S-Left> 10h
+map <S-Right> 10l
+
+" Shifting
+vno < <gv
+vno > >gv
+vno <tab> >gv
+vno <C-S-tab> <gv
 
 " Buffer shortcuts
 map <C-PageUp> :bprev<Enter>
 map <C-PageDown> :bnext<Enter>
 map <C-s> :w<Enter>
 
-" Selecting with shift and arrow keys
-nmap <S-Up> v<Up>
-nmap <S-Down> v<Down>
-nmap <S-Left> v<Left>
-nmap <S-Right> v<Right>
-vmap <S-Up> <Up>
-vmap <S-Down> <Down>
-vmap <S-Left> <Left>
-vmap <S-Right> <Right>
-
-" Indent
-set tabstop=2
-set shiftwidth=2
-set noexpandtab
-
-" Incremental search
+" Searching
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
 map /  <Plug>(incsearch-forward)
@@ -104,6 +105,8 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+map <C-f> /
+map <C-h> :%s 
 
 " Window switching
 nmap <silent> <A-Up> :wincmd k<CR>
