@@ -22,11 +22,12 @@ alias cpu-freq="watch -n 0 'lscpu | grep MHz'"
 alias cpu-temp="watch -n 0 'sensors'"
 alias dir-sizes="du -h --max-depth=1"
 alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq)"
+alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 
 # Git aliases
 alias gs="git status"
 alias gd="git diff"
-alias gl="git log"
+alias gl="git lg"
 
 function ec() {
 	emacsclient -c "$@" > /dev/null
