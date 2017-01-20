@@ -72,15 +72,22 @@ set tabstop=2
 set shiftwidth=2
 set noexpandtab
 
-nmap <BS> d<Left>
 nmap <C-g> <Esc>
 vmap <C-g> <Esc>
-nmap <C-_> gcc
-vmap <C-_> gc
+
+" Moving around
 map <S-Up> 10k
 map <S-Down> 10j
 map <S-Left> 10h
 map <S-Right> 10l
+
+" Comments
+nmap <C-_> gcc
+vmap <C-_> gc
+
+" Expand region
+map = <Plug>(expand_region_expand)
+map - <Plug>(expand_region_shrink)
 
 " Shifting
 vno < <gv
