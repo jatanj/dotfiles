@@ -29,3 +29,8 @@
 !.config/
 .config/*
 !.config/compton.conf
+
+!.weechat/
+.weechat/*
+!.weechat/weechat.conf
+!.weechat/buffers.conf
