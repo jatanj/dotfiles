@@ -10,8 +10,8 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export TERM=xterm-256color
-export EDITOR=vim
+export TERM="xterm-256color"
+export EDITOR="vim"
 export VISUAL="emacsclient -c"
 export SUDO_EDITOR="emacsclient -c"
 

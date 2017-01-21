@@ -3,6 +3,7 @@
 !.gitconfig
 !.zshenv
 !.zshrc
+!.tmux.conf
 !.gtkrc-2.0
 !.Xresources
 !.alsoftrc
