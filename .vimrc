@@ -65,6 +65,7 @@ syntax on
 set mouse=a
 set number
 set clipboard=unnamedplus
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
 set hidden
 set nowrap
 set sidescroll=1
