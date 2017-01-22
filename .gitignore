@@ -10,6 +10,7 @@
 !.asoundrc
 !bin/
 
+# Vim
 !.vimrc
 !.vim/
 .vim/*
@@ -22,15 +23,22 @@
 .vim/autoload/airline/themes/*
 !.vim/autoload/airline/themes/nord.vim
 
-!.themes/
-.themes/*
-!.themes/Fjord/
-
+# Compton
 !.config/
 .config/*
 !.config/compton.conf
 
+# Terminator
+!.config/terminator/
+
+# Weechat
 !.weechat/
 .weechat/*
 !.weechat/weechat.conf
 !.weechat/buffers.conf
+
+# Notification themes
+!.themes/
+.themes/*
+!.themes/Fjord/
+

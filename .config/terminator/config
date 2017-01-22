@@ -1,0 +1,43 @@
+[global_config]
+  inactive_color_offset = 1.0
+[keybindings]
+  go_down = None
+  go_left = None
+  go_right = None
+  go_up = None
+  hide_window = None
+  move_tab_left = None
+  move_tab_right = None
+  next_tab = <Primary><Shift>Page_Down
+  prev_tab = <Primary><Shift>Page_Up
+  reset = None
+  reset_clear = None
+  scaled_zoom = None
+  split_horiz = None
+  split_vert = None
+  toggle_scrollbar = None
+  toggle_zoom = None
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#2c303c"
+    background_darkness = 0.98
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#aaaaaa"
+    font = Inconsolata Medium 12.5
+    foreground_color = "#d8dee9"
+    icon_bell = False
+    palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#7272a1:#3f8baa:#e5e9f0:#2c303c:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#8989c4:#5aa4c2:#eceff4"
+    scrollback_lines = 1000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
