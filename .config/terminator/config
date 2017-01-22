@@ -1,5 +1,6 @@
 [global_config]
   inactive_color_offset = 1.0
+  title_font = Inconsolata Medium 10
 [keybindings]
   go_down = None
   go_left = None
@@ -8,6 +9,7 @@
   hide_window = None
   move_tab_left = None
   move_tab_right = None
+  new_terminator = None
   next_tab = <Primary><Shift>Page_Down
   prev_tab = <Primary><Shift>Page_Up
   reset = None
