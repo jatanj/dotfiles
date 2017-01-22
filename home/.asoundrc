@@ -1,4 +1,18 @@
-[general]
-drivers = alsa
-hrtf = true
-cf_level = 5
+pcm.bs2b {
+  type ladspa
+  slave.pcm "plug:dmix"
+  path "/usr/lib/ladspa"
+  plugins [
+    {
+      label bs2b
+      input {
+        controls [ 700 6 ]
+      }
+    }
+  ]
+}
+
+pcm.!default {
+  type plug
+  slave.pcm "pcm.bs2b"
+}
