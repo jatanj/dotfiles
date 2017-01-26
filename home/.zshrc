@@ -16,7 +16,7 @@ export VISUAL="emacsclient -c"
 export SUDO_EDITOR="emacsclient -c"
 
 alias desktop='cd ~/Desktop'
-alias develop='cd ~/Develop'
+alias develop='cd ~/develop'
 alias sound="alsamixer"
 alias cpu-freq="watch -n 0 'lscpu | grep MHz'"
 alias cpu-temp="watch -n 0 'sensors'"
