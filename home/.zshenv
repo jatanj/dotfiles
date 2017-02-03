@@ -1,4 +1,4 @@
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export FONTCONFIG_PATH="/etc/fonts/"
 
 if [ -n "$DESKTOP_SESSION" ];then
