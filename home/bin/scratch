@@ -1,0 +1,2 @@
+#!/bin/zsh
+eval "$VISUAL ~/Documents/scratch/$(date '+%Y%m%d-%H%M%S').txt"
