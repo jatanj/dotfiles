@@ -1,17 +1,17 @@
 export ZSH=/home/J/.oh-my-zsh
-DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE=true
 
 # Theme
-PURE_PROMPT_SYMBOL='$'
-ZSH_THEME='pure'
+PURE_PROMPT_SYMBOL=$
+ZSH_THEME=pure
 
 # Plugins
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-export TERM="xterm-256color"
-export EDITOR="vim"
+export TERM=xterm-256color
+export EDITOR=vim
 export VISUAL="emacsclient -c"
 export SUDO_EDITOR="emacsclient -c"
 
@@ -27,6 +27,10 @@ alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 alias gs="git status -s"
 alias gd="git diff"
 alias gl="git lg"
+
+# GNU Global
+export GTAGSCONF=/usr/local/share/gtags/gtags.conf
+export GTAGSLABEL=new-ctags
 
 function ec() {
 	emacsclient -c "$@" > /dev/null
