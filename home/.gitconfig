@@ -12,3 +12,5 @@
   frag = cyan 
   old = red
   new = green
+[core]
+  excludesfile = /home/J/.gitignore_global
