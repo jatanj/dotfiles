@@ -1,4 +1,3 @@
-# Run-or-raise
 "jumpapp chromium --start-maximized"
 	Alt + i
 "jumpapp -f emacs"
@@ -9,6 +8,6 @@
 	Alt + u
 "jumpapp -t Terminal xfce4-terminal"
 	Alt + grave
-"jumpapp-weechat"
+"jumpterm weechat --geometry=150x42"
 	Alt + backslash
 
