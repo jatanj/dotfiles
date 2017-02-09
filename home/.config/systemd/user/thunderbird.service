@@ -1,0 +1,13 @@
+[Unit]
+Description=Thunderbird
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/thunderbird
+ExecStop=/usr/bin/pkill thunderbird
+Restart=on-failure
+RestartSec=60
+
+[Install]
+WantedBy=default.target
+

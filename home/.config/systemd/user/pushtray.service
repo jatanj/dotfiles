@@ -1,0 +1,13 @@
+[Unit]
+Description=Pushtray
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/pushtray connect --log=debug
+ExecStop=/usr/bin/pgrep -f pushtray | /usr/bin/xargs kill
+Restart=on-failure
+RestartSec=300
+
+[Install]
+WantedBy=default.target
