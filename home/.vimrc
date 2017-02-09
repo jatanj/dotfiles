@@ -115,7 +115,7 @@ map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 map <C-f> /
-map <C-h> :%s 
+map <C-h> :%s/
 
 " Window switching
 nmap <silent> <A-Up> :wincmd k<CR>
