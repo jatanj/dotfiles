@@ -7,9 +7,10 @@ xbindkeys
 # Startup programs
 compton &
 volumeicon &
+pushtray connect &
 
 # User services
-services=(thunderbird pushtray)
+services=(thunderbird)
 for service in "${services[@]}"; do
   systemctl --user start "$service"
 done
