@@ -1,0 +1,5 @@
+#!/bin/bash
+stow --delete home
+git pull
+stow home
+systemctl --user daemon-reload
