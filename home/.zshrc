@@ -27,7 +27,7 @@ alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
 alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 
 # Git
-alias gs="git status -s"
+alias gs="git status -sb"
 alias gd="git diff"
 alias gl="git lg"
 
@@ -38,5 +38,3 @@ export GTAGSLABEL=new-ctags
 # Disable terminal scroll lock
 stty -ixon
 
-# Start in develop directory
-develop

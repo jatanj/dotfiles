@@ -7,7 +7,7 @@ xbindkeys
 # Startup programs
 compton &
 volumeicon &
-pushtray connect &
+tmux new -d -s pushtray 'pushtray connect --log=info 2> /dev/null' 
 
 # User services
 services=(thunderbird)

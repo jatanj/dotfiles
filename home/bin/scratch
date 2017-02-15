@@ -1,2 +1,2 @@
 #!/bin/bash
-eval "$VISUAL ~/Documents/scratch/$(date '+%Y%m%d-%H%M%S').txt"
+eval "$VISUAL ~/Documents/scratch/$(date '+%Y%m%d-%H%M%S').org"

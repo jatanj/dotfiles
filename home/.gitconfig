@@ -1,12 +1,11 @@
 [user]
   name = Jatan Patel
-  email = jjpatel2@outlook.com
+  email = j@jatan.me
 [alias]
-  uncommit = reset --soft HEAD~
-  recommit = reset 'HEAD@{1}'
   lg = log --color --graph --pretty=format:'%C(yellow)%h%Creset - %s %Cgreen(%cr) %C(blue)(%an)%Creset %C(cyan)%d%Creset' --abbrev-commit --date=relative
   amend = commit --amend
-  stat = diff --stat
+  uncommit = reset --soft HEAD~
+  recommit = reset 'HEAD@{1}'
 [color "diff"]
   meta = white ul
   frag = cyan 
