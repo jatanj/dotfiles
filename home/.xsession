@@ -1,4 +1,11 @@
 #!/bin/bash
+export PATH="$HOME/bin:$PATH"
+export FONTCONFIG_PATH="/etc/fonts/"
+
+if [ -n "$DESKTOP_SESSION" ];then
+    eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+    export SSH_AUTH_SOCK
+fi
 
 # Key bindings
 xmodmap ~/.Xmodmap
@@ -7,10 +14,10 @@ xbindkeys
 # Startup programs
 compton &
 volumeicon &
-tmux new -d -s pushtray 'pushtray connect --log=info 2> /dev/null' 
+tmux new -d -s pushtray "pushtray connect --log=info 2> /dev/null"
 
 # User services
-services=(thunderbird)
+services=(emacs thunderbird)
 for service in "${services[@]}"; do
   systemctl --user start "$service"
 done

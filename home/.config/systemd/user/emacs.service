@@ -7,7 +7,7 @@ Type=forking
 ExecStart=/usr/bin/emacs --daemon
 ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook nil) (kill-emacs))"
 Restart=on-failure
-Environment=DISPLAY=:%i
+Environment='DISPLAY=:%i' 'SSH_AUTH_SOCK=%t/keyring/ssh'
 TimeoutStartSec=0
 
 [Install]
