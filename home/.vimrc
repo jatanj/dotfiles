@@ -15,20 +15,16 @@ filetype plugin indent on
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+NeoBundle 'ap/vim-buftabline'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'qpkorr/vim-bufkill'
+NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-commentary'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'ap/vim-buftabline'
-NeoBundle 'qpkorr/vim-bufkill'
-NeoBundle 'jiangmiao/auto-pairs'
 NeoBundle 'tpope/vim-sleuth'
-NeoBundle 'szw/vim-maximizer'
-NeoBundle 'leafgarland/typescript-vim'
 
 call neobundle#end()
 
@@ -86,6 +82,7 @@ map <S-Right> 10l
 " Comments
 nmap <C-_> gcc
 vmap <C-_> gc
+au FileType ocaml set commentstring=(*\ %s\ *)
 
 " Expand region
 map = <Plug>(expand_region_expand)
