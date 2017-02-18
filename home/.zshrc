@@ -1,14 +1,16 @@
-export ZSH=/home/J/.oh-my-zsh
+ZSH_THEME=""
 DISABLE_AUTO_UPDATE=true
 
-# Theme
-PURE_PROMPT_SYMBOL=$
-ZSH_THEME=pure
-
-# Plugins
 plugins=(git)
 
+export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+
+autoload -U promptinit
+promptinit
+
+PURE_PROMPT_SYMBOL=$
+prompt pure
 
 export TERM=xterm-256color
 export EDITOR=vim
