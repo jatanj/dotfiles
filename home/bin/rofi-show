@@ -1,5 +1,4 @@
 #!/bin/env bash
-
 rofi -show run -color-window "#cc2b2e37, #cc2b2e37, #002b2e37" \
 		 -color-normal "#002b2e37, #ffffff, #002b2e37, #aa6d97c5, #ffffff" \
 	   -fullscreen -padding 300 -font "Inconsolata 20"

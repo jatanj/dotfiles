@@ -1,0 +1,3 @@
+#!/bin/bash
+[[ -z "$1" ]] && dir="." || dir="$1"
+(emacsclient -c --eval "(magit-status \"$dir\")" &> /dev/null &)

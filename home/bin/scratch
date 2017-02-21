@@ -1,2 +1,12 @@
 #!/bin/bash
-eval "$VISUAL ~/Documents/scratch/$(date '+%Y%m%d-%H%M%S').org"
+
+name="$1"
+dir="~/Documents/scratch"
+
+if [[ -z "$name" ]]; then
+  eval "$VISUAL $dir/$(date '+%Y%m%d-%H%M%S').org"
+elif [[ $name == *"."* ]]; then
+  eval "$VISUAL $dir/$name"
+else
+  eval "$VISUAL $dir/${name}.org"
+fi
