@@ -21,6 +21,7 @@ alias cpu-temp="watch -n 0 'sensors'"
 
 function ec() { emacsclient -c "$@" > /dev/null; }
 function whichg() { thunar $(dirname $(which "$1")); }
+function ignore() { eval "$@" > /dev/null 2>&1; }
 
 # Pacman
 alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
