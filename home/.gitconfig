@@ -6,6 +6,7 @@
   amend = commit --amend
   uncommit = reset --soft HEAD~
   recommit = reset 'HEAD@{1}'
+  toplevel = rev-parse --show-toplevel
 [color "diff"]
   meta = white ul
   frag = cyan 

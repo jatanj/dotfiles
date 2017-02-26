@@ -31,6 +31,7 @@ alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 alias gs="git status -sb"
 alias gd="git diff"
 alias gl="git lg"
+function git-toplevel() { cd $(git toplevel); }
 
 # GNU Global
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
