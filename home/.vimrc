@@ -43,14 +43,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:NERDTreeWinSize = 22
 
-" typescript-vim
-au BufRead,BufNewFile *.ts set filetype=typescript
-let g:typescript_indent_disable = 1
-
-" tsuquyomi
-" autocmd FileType typescript setlocal completeopt-=menu
-
-" Fix backspace
+" Backspace
 set backspace=2
 set backspace=indent,eol,start
 
@@ -72,8 +65,9 @@ set expandtab
 
 nmap <C-g> <Esc>
 vmap <C-g> <Esc>
-
-" Moving around
+map <C-PageUp> :bprev<Enter>
+map <C-PageDown> :bnext<Enter>
+map <C-s> :w<Enter>
 map <S-Up> 10k
 map <S-Down> 10j
 map <S-Left> 10h
@@ -93,11 +87,6 @@ vno < <gv
 vno > >gv
 vno <tab> >gv
 vno <C-S-tab> <gv
-
-" Buffer shortcuts
-map <C-PageUp> :bprev<Enter>
-map <C-PageDown> :bnext<Enter>
-map <C-s> :w<Enter>
 
 " Searching
 set hlsearch
