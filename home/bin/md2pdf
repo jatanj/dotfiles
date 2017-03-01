@@ -1,0 +1,14 @@
+#!/bin/sh
+
+for last; do true; done
+dir=$(dirname "$last")
+file=$(basename "$last")
+
+pandoc\
+  -f markdown\
+  -t latex\
+  --latex-engine xelatex\
+  -V geometry:margin=1in\
+  -V urlcolor=cyan\
+  -o "$dir/output-${file%.*}.pdf"\
+  "$@"
