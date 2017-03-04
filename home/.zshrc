@@ -19,9 +19,9 @@ alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
 alias cpu-temp="watch -n 0 'sensors'"
 
-function ec() { emacsclient -c "$@" > /dev/null; }
-function whichg() { thunar $(dirname $(which "$1")); }
-function ignore() { eval "$@" > /dev/null 2>&1; }
+ec() { emacsclient -c "$@" > /dev/null; }
+whichg() { thunar $(dirname $(which "$1")); }
+ignore() { eval "$@" > /dev/null 2>&1; }
 
 # Pacman
 alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
@@ -31,7 +31,7 @@ alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 alias gs="git status -sb"
 alias gd="git diff"
 alias gl="git lg"
-function git-toplevel() { cd $(git toplevel); }
+git-toplevel() { cd $(git toplevel); }
 
 # GNU Global
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
