@@ -12,7 +12,7 @@ unset _JAVA_OPTIONS
 alias java='java "$_SILENT_JAVA_OPTIONS"'
 
 # Key bindings
-xmodmap ~/.Xmodmap
+xmodmap $HOME/.Xmodmap
 xbindkeys
 
 # Startup programs
