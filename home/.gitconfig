@@ -7,6 +7,7 @@
   uncommit = reset --soft HEAD~
   recommit = reset 'HEAD@{1}'
   toplevel = rev-parse --show-toplevel
+  aliases = !git config --get-regexp 'alias.*' | sed 's/^alias\\.//' | sed 's/[ ]/ = /' | sort
 [color "diff"]
   meta = white ul
   frag = cyan 
