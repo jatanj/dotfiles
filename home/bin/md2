@@ -1,0 +1,41 @@
+#!/bin/bash
+
+for last; do true; done
+dir=$(dirname "$last")
+file=$(basename "$last")
+
+output_file_name() {
+  echo "$dir/output-${file%.*}.$1"
+}
+
+regex="md2([A-Za-z0-9]+)"
+
+if [[ "$0" =~ $regex ]]; then
+  format="${BASH_REMATCH[1]}"
+else
+  format="$1"
+  shift
+fi
+
+case "$format" in
+  "pdf")
+    pandoc\
+      -f markdown\
+      -t latex\
+      --latex-engine xelatex\
+      -V geometry:margin=1in\
+      -V urlcolor=cyan\
+      --number-sections\
+      -o "$(output_file_name pdf)"\
+      "$@"
+    ;;
+  "odt")
+    pandoc\
+      -f markdown\
+      -t odt\
+      -o "$(output_file_name odt)"\
+      "$@"
+    ;;
+  *) echo "error: 'md2$match' command not found"
+esac
+
