@@ -25,6 +25,8 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'tommcdo/vim-exchange'
+NeoBundle 'wellle/targets.vim'
 
 call neobundle#end()
 
