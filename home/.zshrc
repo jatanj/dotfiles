@@ -37,6 +37,9 @@ git-toplevel() { cd $(git toplevel); }
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 
+# Set colors for ls
+export LS_COLORS="tw=01;30:ow=01;34"
+
 # Workaround for tmux drawing issues
 alias htop="TERM=screen /usr/bin/htop"
 
