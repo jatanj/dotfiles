@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Thunderbird
+GenericName=Mail Client
+Exec=/usr/bin/thunderbird
+Terminal=false
+Icon=thunderbird
+Categories=Network
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true

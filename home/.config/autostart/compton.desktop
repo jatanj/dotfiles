@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Compton
+GenericName=Compositor
+Exec=/usr/bin/compton
+Terminal=false
+Icon=compton
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
