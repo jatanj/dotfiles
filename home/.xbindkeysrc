@@ -1,3 +1,4 @@
+# Run-or-raise
 "jumpapp chromium --start-maximized"
 	Alt + i
 "jumpapp -f emacs"
@@ -10,3 +11,4 @@
 	Alt + grave
 "jumpterm weechat --geometry=150x42"
 	Alt + backslash
+

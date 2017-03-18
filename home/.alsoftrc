@@ -1,4 +1,2 @@
 [general]
-drivers = alsa
-hrtf = true
-cf_level = 5
+drivers = pulse,alsa
