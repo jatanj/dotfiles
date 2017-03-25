@@ -25,6 +25,7 @@ hi Search ctermfg=NONE ctermbg=139 cterm=underline guifg=NONE guibg=#484b5a gui=
 hi Directory ctermfg=141 ctermbg=0 cterm=NONE guifg=#ac92ec guibg=NONE gui=NONE
 hi Folded ctermfg=102 ctermbg=0 cterm=NONE guifg=#767f8c guibg=#333842 gui=NONE
 hi LineNr ctermfg=015 ctermbg=NONE cterm=NONE guifg=#4c566a guibg=NONE gui=NONE
+hi Nontext ctermfg=015 ctermbg=NONE cterm=NONE guifg=#4c566a guibg=NONE gui=NONE
 
 hi Boolean ctermfg=139 ctermbg=NONE cterm=NONE guifg=#90788c guibg=NONE gui=NONE
 hi Character ctermfg=141 ctermbg=NONE cterm=NONE guifg=#66a9d4 guibg=NONE gui=NONE

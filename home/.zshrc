@@ -19,7 +19,7 @@ alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
 alias cpu-temp="watch -n 0 'sensors'"
 
-ec() { emacsclient -c "$@" > /dev/null; }
+ec() { (emacsclient -c "$@" &> /dev/null &); }
 whichg() { thunar $(dirname $(which "$1")); }
 ignore() { eval "$@" > /dev/null 2>&1; }
 

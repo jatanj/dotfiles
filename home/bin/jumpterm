@@ -1,8 +1,8 @@
 #!/bin/bash
 program="$1"
-if [[ "$(pidof $program 2> /dev/null)" ]]; then
+if [[ $(pidof $program 2> /dev/null) ]]; then
 	jumpapp -t "$program" xfce4-terminal
-elif [[ ! -e "$(which $program 2> /dev/null)" ]]; then
+elif [[ ! -e $(which $program 2> /dev/null) ]]; then
 	xfce4-terminal "$@"
 else
 	shift
