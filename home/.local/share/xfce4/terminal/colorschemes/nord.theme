@@ -1,0 +1,9 @@
+[Scheme]
+Name=Nord
+ColorCursor=#D8DEE9
+ColorForeground=#D8DEE9
+ColorBackground=#3B4252
+TabActivityColor=#88C0D0
+ColorPalette=rgb(67,76,94);rgb(191,97,106);rgb(163,190,140);rgb(235,203,139);rgb(129,161,193);rgb(114,114,161);rgb(63,139,170);rgb(229,233,240);rgb(93,102,120);rgb(191,97,106);rgb(163,190,140);rgb(235,203,139);rgb(129,161,193);rgb(137,137,196);rgb(90,164,194);rgb(236,239,244)
+ColorBold=#D8DEE9
+ColorBoldUseDefault=FALSE
