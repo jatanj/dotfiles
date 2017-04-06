@@ -8,8 +8,7 @@ if [[ ! -f "$theme" ]]; then
   exit 1
 fi
 
-theme_colors=$(sed "/\[.*\]\|^$\|Name=/d" $theme)
-pattern="$(echo "$theme_colors" | sed "s/\(.*\)=.*/(\1=.*)/" | paste -sd "|" -)"
+theme_colors=$(sed "/\[.*\]\|^$\|Name=/d" "$theme")
+pattern=$(echo "$theme_colors" | sed "s/\(.*\)=.*/(\1=.*)/" | paste -sd "|" -)
 printf "%s\n%s" "$(grep -Ev "$pattern" "$config_dir/terminalrc")" "$theme_colors" \
   > "$config_dir/terminalrc"
-

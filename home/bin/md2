@@ -36,6 +36,5 @@ case "$format" in
       -o "$(output_file_name odt)"\
       "$@"
     ;;
-  *) echo "error: 'md2$match' command not found"
+  *) echo "error: 'md2$format' command not found"
 esac
-
