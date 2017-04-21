@@ -1,6 +1,6 @@
 ZSH_THEME=""
 DISABLE_AUTO_UPDATE=true
-plugins=(git)
+plugins=(git sbt gradle)
 
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
@@ -9,6 +9,10 @@ autoload -U promptinit
 promptinit
 PURE_PROMPT_SYMBOL="%Bλ%b"
 prompt pure
+
+# if [[ $(uname) == "Linux" ]] && pacman -Q zsh-syntax-highlighting > /dev/null 2>&1; then
+#   source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# fi
 
 export TERM=xterm-256color
 export EDITOR=vim

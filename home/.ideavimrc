@@ -1,0 +1,7 @@
+nmap <C-g> <Esc>
+vmap <C-g> <Esc>
+map <C-s> :w<Enter>
+map <S-Up> 10k
+map <S-Down> 10j
+map <S-Left> 10h
+map <S-Right> 10l
