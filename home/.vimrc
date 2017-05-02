@@ -76,6 +76,11 @@ map <S-Down> 10j
 map <S-Left> 10h
 map <S-Right> 10l
 
+" Change cursor depending on mode
+let &t_SI = "\<Esc>[6 q"
+let &t_SR = "\<Esc>[4 q"
+let &t_EI = "\<Esc>[2 q"
+
 " Comments
 nmap <C-_> gcc
 vmap <C-_> gc

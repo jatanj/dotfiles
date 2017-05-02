@@ -1,3 +1,5 @@
+set clipboard+=unnamedplus
+
 nmap <C-g> <Esc>
 vmap <C-g> <Esc>
 map <C-s> :w<Enter>
