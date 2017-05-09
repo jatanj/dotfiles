@@ -1,2 +1,0 @@
-#!/bin/bash
-(emacsclient -c "$HOME/develop/sync/notes/$1.org" &> /dev/null &)
