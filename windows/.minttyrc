@@ -37,6 +37,6 @@ PgUpDnScroll=no
 ScrollbackLines=30000
 CursorType=block
 CursorBlinks=no
-Transparency=low
+Transparency=6
 ConfirmExit=no
 ScrollMod=shift
