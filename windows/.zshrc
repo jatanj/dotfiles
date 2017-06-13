@@ -53,7 +53,18 @@ scratch() {
     fi
 }
 screenshot() { import -window root "$HOME/Pictures/screenshots/$(date '+%Y%m%d-%H%M%S').png"; }
-whichg() { thunar $(dirname $(which "$1")); }
+whichg() {
+	if [ -z "$@" ]; then
+	    return
+	else
+	    case "$OSTYPE" in
+		cygwin) ;&
+		msys)
+		    explorer $(cygpath $(dirname "$(where "$@")") -w)
+		    ;;
+	    esac
+	fi
+}
 ignore() { eval "$@" > /dev/null 2>&1; }
 
 # GNU Global
