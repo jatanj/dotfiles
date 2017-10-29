@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Pushtray
+Exec=tmux new -d -s pushtray "pushtray connect --no-tray-icon --log=info 2> /dev/null"
+Type=Application
+Terminal=false
+X-GNOME-Autostart-enabled=true
