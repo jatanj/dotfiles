@@ -1,14 +1,16 @@
 # Run-or-raise
-"jumpapp chromium --start-maximized"
+"jumpapp chromium"
 	Alt + i
 "jumpapp -f emacs"
 	Alt + p
 "jumpapp -f thunderbird"
 	Alt + m
-"jumpapp thunar"
+"jumpapp -f nautilus"
 	Alt + u
 "jumpapp -t Terminal xfce4-terminal"
 	Alt + grave
+"xfce4-terminal"
+	Alt + Control + n
 "jumpterm weechat --geometry=150x42"
 	Alt + backslash
 "jumpapp -c jetbrains-idea-ce idea"

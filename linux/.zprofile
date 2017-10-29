@@ -9,3 +9,12 @@ _SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS"
 unset _JAVA_OPTIONS
 alias java='java "$_SILENT_JAVA_OPTIONS"'
 
+eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
+# Key bindings
+xmodmap $HOME/.Xmodmap
+if ! pidof -x xbindkeys >> /dev/null; then
+  xbindkeys
+fi
+
