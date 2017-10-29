@@ -1,0 +1,15 @@
+#!/bin/bash
+if [ -z "$@" ]; then
+    echo "error: no arguments"
+    exit 1
+fi
+
+dir=$(readlink -f $(find ./ -type d -name '.wine'))
+if [ -z $dir ]; then
+    echo "error: WINEPREFIX directory not found"
+    exit 1
+fi
+
+wineprefix="env WINEPREFIX=$dir"
+echo "$wineprefix"
+eval "$wineprefix $@"
