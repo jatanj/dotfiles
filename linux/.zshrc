@@ -60,11 +60,8 @@ scratch() {
 whichg() { thunar $(dirname $(which "$1")); }
 ignore() { eval "$@" > /dev/null 2>&1; }
 
-# GNU Global
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
-
-# Set colors for ls
 export LS_COLORS="tw=01;30:ow=01;34;40"
 
 # Tilix VTE fix
