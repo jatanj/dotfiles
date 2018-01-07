@@ -1,0 +1,22 @@
+#!/bin/bash
+if [[ -z "$1" ]]; then
+  echo "usage: extract-icon <exe-file>"
+  exit 1
+fi
+
+path="$(readlink -f "$1")"
+file="$(basename $path)"
+extension="${file##*.}"
+
+if [[ ! "$extension" = "exe" ]]; then
+  echo "error: "$file" is not an Windows executable file!"
+  exit 1
+fi
+
+output="${file%.*}.ico"
+echo "Extracting $output from $file..."
+
+wrestool -x -t 14 "$path" > "$output"
+mogrify -format PNG "$output"
+rm -f "$output"
+
