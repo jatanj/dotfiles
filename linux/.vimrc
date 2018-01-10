@@ -3,7 +3,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-set nocompatible
 set termguicolors
 
 " Required:
@@ -119,9 +118,10 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 " Swap files
 set swapfile
-set directory=~/.vim/.tmp
+silent !mkdir ~/.vim/tmp > /dev/null 2>&1
+set directory=~/.vim/tmp
 set dir=~/.vim/.tmp
-set backupdir=~/.vim/.tmp
+set backupdir=~/.vim/tmp
 
 " Disable beeping
 set noeb vb t_vb=

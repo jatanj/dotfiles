@@ -1,14 +1,21 @@
-ZSH_THEME=""
+ZSH_THEME="spaceship"
+plugins=(git)
+export ZSH=$HOME/.oh-my-zsh
+DISABLE_UPDATE_PROMPT=true
 DISABLE_AUTO_UPDATE=true
-plugins=(git sbt gradle)
 
-export ZSH="$HOME/.oh-my-zsh"
+SPACESHIP_PROMPT_SYMBOL="%Bλ%b"
+SPACESHIP_USER_SHOW=false
+SPACESHIP_TIME_12HR=true
+SPACESHIP_EXEC_TIME_PREFIX=" "
+# SPACESHIP_GIT_SHOW=false
+# SPACESHIP_GIT_BRANCH_SHOW=false
+SPACESHIP_GIT_BRANCH_PREFIX=" "
+SPACESHIP_GIT_PREFIX="on"
+SPACESHIP_GIT_STATUS_SHOW=false
+SPACESHIP_GIT_STATUS_COLOR="grey"
+
 source $ZSH/oh-my-zsh.sh
-
-autoload -U promptinit
-promptinit
-PURE_PROMPT_SYMBOL="%Bλ%b"
-prompt pure
 
 # if [[ $(uname) == "Linux" ]] && pacman -Q zsh-syntax-highlighting > /dev/null 2>&1; then
 #   source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
@@ -24,8 +31,10 @@ alias develop='cd ~/develop'
 alias cpu-temp="watch -n 0 'sensors'"
 
 # Pacman
-alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
-alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
+if command -v pacman > /dev/null 2>&1; then
+    alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
+    alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
+fi
 
 # Git
 alias gs="git status -sb"
