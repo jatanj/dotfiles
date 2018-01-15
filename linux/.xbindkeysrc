@@ -1,4 +1,3 @@
-# Run-or-raise
 "jumpapp chromium"
 	Alt + i
 "jumpapp -f emacs"
@@ -15,4 +14,9 @@
 	Alt + backslash
 "jumpapp -c jetbrains-idea-ce idea"
 	Alt + o
+"rofi-show"
+  Mod4 + Super_R + s
+"nautilus"
+  Alt + Control + u
+  
 
