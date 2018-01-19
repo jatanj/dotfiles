@@ -17,10 +17,6 @@ SPACESHIP_GIT_STATUS_COLOR="grey"
 
 source $ZSH/oh-my-zsh.sh
 
-# if [[ $(uname) == "Linux" ]] && pacman -Q zsh-syntax-highlighting > /dev/null 2>&1; then
-#   source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-# fi
-
 export TERM=xterm-256color
 export EDITOR=vim
 export VISUAL="emacsclient -c"
@@ -73,7 +69,7 @@ export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 export LS_COLORS="tw=01;30:ow=01;34;40"
 
-# Tilix VTE fix
+# VTE fix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
