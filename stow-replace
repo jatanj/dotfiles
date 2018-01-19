@@ -1,9 +1,8 @@
 #!/bin/bash
-
 packages=(shared "$1")
 
 for p in "${packages[@]}"; do stow --delete "$p"; done
-git pull
+git pull origin master
 for p in "${packages[@]}"; do stow "$p"; done
 
 if command -v systemctl > /dev/null 2>&1; then

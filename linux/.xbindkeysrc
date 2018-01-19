@@ -6,9 +6,9 @@
 	Alt + m
 "jumpapp -f nautilus"
 	Alt + u
-"jumpapp -t Terminal xfce4-terminal"
+"jumpapp -t Terminal xfce4-terminal --default-working-directory=$HOME"
 	Alt + grave
-"xfce4-terminal"
+"xfce4-terminal --default-working-directory=$HOME"
 	Alt + Control + n
 "jumpterm weechat --geometry=150x42"
 	Alt + backslash
