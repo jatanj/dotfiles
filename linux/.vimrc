@@ -118,9 +118,9 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 " Swap files
 set swapfile
-silent !mkdir ~/.vim/tmp > /dev/null 2>&1
+silent !mkdir -p ~/.vim/tmp > /dev/null 2>&1
 set directory=~/.vim/tmp
-set dir=~/.vim/.tmp
+set dir=~/.vim/tmp
 set backupdir=~/.vim/tmp
 
 " Disable beeping
