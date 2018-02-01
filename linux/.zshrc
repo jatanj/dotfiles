@@ -24,6 +24,7 @@ export SUDO_EDITOR="emacsclient -c"
 
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
+alias scratch='cd ~/scratch'
 alias cpu-temp="watch -n 0 'sensors'"
 
 # Pacman
@@ -51,15 +52,14 @@ org() {
 }
 
 # Miscellaneous functions
-scratch() {
+sf() {
     name="$1"
-    dir="~/Documents/scratch"
+    org_name=$(date '+%Y%m%d-%H%M%S').org
+    dir="~/scratch"
     if [[ -z "$name" ]]; then
-        eval "$VISUAL $dir/$(date '+%Y%m%d-%H%M%S').org"
-    elif [[ $name == *"."* ]]; then
-        eval "$VISUAL $dir/$name"
+        eval "$VISUAL $dir/$org_name"
     else
-        eval "$VISUAL $dir/${name}.org"
+        eval "$VISUAL $dir/$name"
     fi
 }
 whichg() { thunar $(dirname $(which "$1")); }
