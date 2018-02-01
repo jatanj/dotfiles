@@ -15,6 +15,11 @@ fi
 export SSH_AUTH_SOCK
 
 # Key bindings
-if command -v xmodmap > /dev/null 2>&1; then xmodmap $HOME/.Xmodmap; fi
-if command -v xbindkeys > /dev/null 2>&1; then xbindkeys; fi
+if command -v xmodmap > /dev/null 2>&1; then
+  xmodmap $HOME/.Xmodmap
+fi
+if command -v xbindkeys > /dev/null 2>&1 && \
+  ! pgrep -x xbindkeys > /dev/null 2>&1; then
+  xbindkeys
+fi
 
