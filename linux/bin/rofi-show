@@ -1,2 +1,7 @@
 #!/bin/env bash
-rofi -modi drun -show drun -show-icons true -font "Inconsolata 20" -fullscreen
+rofi -modi drun -show drun \
+  -matching fuzzy \
+  -levenshtein-sort \
+  -show-icons true \
+  -font "Inconsolata 20" \
+  -fullscreen
