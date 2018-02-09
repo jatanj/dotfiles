@@ -4,6 +4,7 @@
 [alias]
   lg = log --color --graph --pretty=format:'%C(green)%h%Creset - %s %C(yellow)(%cr) %C(blue)(%an)%Creset %C(cyan)%d%Creset' --abbrev-commit --date=relative
   amend = commit --amend
+  co = checkout
   uncommit = reset --soft HEAD~
   recommit = reset 'HEAD@{1}'
   toplevel = rev-parse --show-toplevel
@@ -14,4 +15,4 @@
   old = red
   new = green
 [core]
-  excludesfile = /home/J/.gitignore_global
+  excludesfile = ~/.gitignore_global
