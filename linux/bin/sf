@@ -1,0 +1,15 @@
+#!/bin/bash
+
+name="$1"
+org_name=$(date '+%Y%m%d-%H%M%S').org
+dir="$HOME/scratch"
+
+if [[ ! -d "$dir" ]]; then
+    echo "error: directory '$dir' does not exist"
+fi
+
+if [[ -z "$name" ]]; then
+    launch $VISUAL "$dir/$org_name"
+else
+    launch $VISUAL "$dir/$name"
+fi

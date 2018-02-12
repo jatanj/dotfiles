@@ -52,16 +52,6 @@ org() {
 }
 
 # Miscellaneous functions
-sf() {
-    name="$1"
-    org_name=$(date '+%Y%m%d-%H%M%S').org
-    dir="~/scratch"
-    if [[ -z "$name" ]]; then
-        eval "$VISUAL $dir/$org_name"
-    else
-        eval "$VISUAL $dir/$name"
-    fi
-}
 ignore() { eval "$@" > /dev/null 2>&1; }
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
