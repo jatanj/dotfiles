@@ -1,0 +1,21 @@
+#!/bin/bash
+
+launch_if_exists() {
+    local -n commands="$1"
+    shift
+    for c in "${commands[@]}"; do
+        local open="$c $*"
+        if command -v "$c" > /dev/null 2>&1; then
+            launch $open
+            exit 0
+        fi
+    done
+}
+
+case "$(uname -s)" in
+    Linux)
+        cmds=(nautilus thunar)
+        launch_if_exists cmds "$*" ;;
+    CYGWIN*|MINGW32*|MSYS*) launch explorer "$*" ;;
+    *) echo "error: unknown file explorer" ;;
+esac

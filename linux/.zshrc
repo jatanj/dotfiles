@@ -62,7 +62,6 @@ sf() {
         eval "$VISUAL $dir/$name"
     fi
 }
-whichg() { thunar $(dirname $(which "$1")); }
 ignore() { eval "$@" > /dev/null 2>&1; }
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
