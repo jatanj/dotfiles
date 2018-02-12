@@ -1,21 +1,19 @@
-# User environment variables
 export PATH="$HOME/bin:$HOME/.cargo/bin:$HOME/.gem/ruby/2.4.0/bin:$PATH"
 export FONTCONFIG_PATH="/etc/fonts/"
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk"
 export GRADLE_HOME="/usr/share/java/gradle/ "
-
 
 if command -v gnome-keyring-daemon > /dev/null 2>&1; then
   eval $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 fi
 export SSH_AUTH_SOCK
 
-# Key bindings
+xset r rate 250 50
 if command -v xmodmap > /dev/null 2>&1; then
-  xmodmap $HOME/.Xmodmap > /dev/null 2>&1
+  xmodmap $HOME/.Xmodmap > /dev/null 2>&1 
 fi
 if command -v xbindkeys > /dev/null 2>&1 && \
-  ! pgrep -x xbindkeys > /dev/null 2>&1; then
+  ! pgrep -x xbindkeys > /dev/null 2>&1; then 
   xbindkeys
 fi
 
