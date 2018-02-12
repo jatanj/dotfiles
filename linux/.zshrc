@@ -47,12 +47,6 @@ magit() {
     [[ -z "$1" ]] && dir="." || dir="$1"
     (emacsclient -c --eval "(magit-status \"$dir\")" &> /dev/null &)
 }
-org() {
-    (emacsclient -c "$HOME/develop/sync/notes/$1.org" &> /dev/null &)
-}
-
-# Miscellaneous functions
-ignore() { eval "$@" > /dev/null 2>&1; }
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
