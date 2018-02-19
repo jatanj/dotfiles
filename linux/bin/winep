@@ -13,3 +13,4 @@ fi
 wineprefix="env WINEPREFIX=$dir"
 echo "$wineprefix"
 eval "$wineprefix $@"
+

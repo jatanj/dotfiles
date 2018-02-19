@@ -19,3 +19,4 @@ case "$(uname -s)" in
     CYGWIN*|MINGW32*|MSYS*) launch explorer "$*" ;;
     *) echo "error: unknown file explorer" ;;
 esac
+
