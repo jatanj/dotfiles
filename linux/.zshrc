@@ -14,6 +14,7 @@ SPACESHIP_GIT_BRANCH_PREFIX=" "
 SPACESHIP_GIT_PREFIX="on"
 SPACESHIP_GIT_STATUS_SHOW=false
 SPACESHIP_GIT_STATUS_COLOR="grey"
+SPACESHIP_BATTERY_SHOW=false
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,6 +39,7 @@ alias gs="git status -sb"
 alias gd="git diff"
 alias gl="git lg"
 git-toplevel() { cd $(git toplevel); }
+git-search() { git grep "$1" $(git rev-list --all) }
 
 # Emacs
 ec() {
