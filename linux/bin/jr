@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+    echo "error: no service given"
+    exit 1
+fi
+
+args="--pager-end --no-tail"
+if [[ "$1" == "--user" ]]; then
+    cmd="journalctl --user -u "$2" $args"
+else
+    cmd="journalctl -u $1 $args"
+fi
+
+eval "env SYSTEMD_LESS=\"FRSXM\" $cmd"
+
