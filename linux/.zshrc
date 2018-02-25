@@ -20,13 +20,14 @@ source $ZSH/oh-my-zsh.sh
 
 export TERM=xterm-256color
 export EDITOR=vim
-export VISUAL="emacsclient -c"
-export SUDO_EDITOR="emacsclient -c"
+export VISUAL=vim
+export SUDO_EDITOR=vim
 
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
 alias scratch='cd ~/scratch'
 alias cpu-temp="watch -n 0 'sensors'"
+alias xm='xmodmap $HOME/.Xmodmap'
 
 # Pacman
 if command -v pacman > /dev/null 2>&1; then
