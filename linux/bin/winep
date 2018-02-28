@@ -6,7 +6,7 @@ fi
 
 dir=$(readlink -f $(find ./ -type d -name '.wine'))
 if [ -z $dir ]; then
-    echo "error: WINEPREFIX directory not found"
+    echo "error: Wine prefix not found"
     exit 1
 fi
 
