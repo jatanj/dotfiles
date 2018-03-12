@@ -1,6 +1,6 @@
 "jumpapp chromium"
 	Alt + i
-"jumpapp -f emacs"
+"jumpapp -c emacs ec --eval '(tabbar-mode)'"
 	Alt + p
 "jumpapp -f thunderbird"
 	Alt + m

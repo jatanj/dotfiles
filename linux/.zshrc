@@ -43,13 +43,6 @@ git-toplevel() { cd $(git toplevel); }
 git-search() { git grep "$1" $(git rev-list --all) }
 
 # Emacs
-ec() {
-    (emacsclient -c "$@" &> /dev/null &);
-}
-magit() {
-    [[ -z "$1" ]] && dir="." || dir="$1"
-    (emacsclient -c --eval "(magit-status \"$dir\")" &> /dev/null &)
-}
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags

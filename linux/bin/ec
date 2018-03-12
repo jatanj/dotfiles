@@ -1,0 +1,14 @@
+#!/bin/bash
+
+launch_ec() {
+    args="$(echo "$1" | sed -r 's/\(.+\)/\"\0\"/g')"
+    eval "launch emacsclient $args"
+}
+
+args="$@"
+if ! pgrep -f "emacsclient -c" > /dev/null || [ ! -f "$1" ]; then
+    args="-c $args"
+fi
+
+launch_ec "$args"
+
