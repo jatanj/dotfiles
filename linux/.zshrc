@@ -26,7 +26,9 @@ export SUDO_EDITOR="emacsclient -c"
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
 alias scratch='cd ~/scratch'
+
 alias cpu-temp="watch -n 0 'sensors'"
+alias gpu-temp="watch -n 0 'nvidia-smi -q -d TEMPERATURE'"
 alias xm='xmodmap $HOME/.Xmodmap'
 
 # Pacman
@@ -41,8 +43,6 @@ alias gd="git diff"
 alias gl="git lg"
 git-toplevel() { cd $(git toplevel); }
 git-search() { git grep "$1" $(git rev-list --all) }
-
-# Emacs
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
