@@ -3,6 +3,7 @@ Description=Pushtray
 
 [Service]
 Type=simple
+Environment=TERM=xterm
 ExecStart=/usr/bin/pushtray connect --no-tray-icon --log=info
 ExecStop=/usr/bin/pkill -f pushtray
 KillMode=process
