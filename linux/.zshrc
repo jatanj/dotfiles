@@ -32,7 +32,7 @@ alias gpu-temp="watch -n 0 'nvidia-smi -q -d TEMPERATURE'"
 alias xm='xmodmap $HOME/.Xmodmap'
 
 # Pacman
-if command -v pacman > /dev/null 2>&1; then
+if command-exists pacman; then
     alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
     alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 fi
@@ -50,7 +50,7 @@ export LS_COLORS="tw=01;30:ow=01;34;40"
 
 # VTE fix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+    source /etc/profile.d/vte.sh
 fi
 
 # Workaround for tmux drawing issues
