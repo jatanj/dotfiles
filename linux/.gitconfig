@@ -5,6 +5,8 @@
   lg = log --color --graph --pretty=format:'%C(green)%h%Creset - %s %C(yellow)(%cr) %C(blue)(%an)%Creset %C(cyan)%d%Creset' --abbrev-commit --date=relative
   amend = commit --amend
   co = checkout
+  mgn = merge --no-ff
+  mff = merge --ff-only
   uncommit = reset --soft HEAD~
   recommit = reset 'HEAD@{1}'
   toplevel = rev-parse --show-toplevel
