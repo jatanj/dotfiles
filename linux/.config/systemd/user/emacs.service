@@ -3,13 +3,11 @@ Description=Emacs: the extensible, self-documenting text editor
 Documentation=man:emacs(1) info:Emacs
 
 [Service]
-Type=forking
-ExecStart=/usr/bin/emacs --daemon
-ExecStartPost=/usr/bin/emacsclient --eval "(desktop-read)"
+Type=simple
+ExecStart=/usr/bin/emacs --fg-daemon
 ExecStop=/usr/bin/emacsclient --eval "(progn (setq kill-emacs-hook nil) (kill-emacs))"
 Environment='DISPLAY=:%i' 'SSH_AUTH_SOCK=%t/keyring/ssh'
 Restart=on-failure
-TimeoutStartSec=0
 
 [Install]
 WantedBy=default.target

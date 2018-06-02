@@ -20,8 +20,8 @@ source $ZSH/oh-my-zsh.sh
 
 export TERM=xterm-256color
 export EDITOR=vim
-export VISUAL="emacsclient -c"
-export SUDO_EDITOR="emacsclient -c"
+export VISUAL="env TERM=xterm-24bit emacsclient -nw"
+export SUDO_EDITOR="env TERM=xterm-24bit emacsclient -nw"
 
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
