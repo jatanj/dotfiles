@@ -1,0 +1,24 @@
+#!/bin/bash
+
+mouse="Xornet"
+prop="libinput Middle Emulation Enabled"
+
+# ls -l /dev/input/by-id/ | sed -e 's/.*usb-[0-9]\+_\([A-Za-z_]\+\).*/\1/;t;d' | sed 's/_/ /g'
+
+id="$(xinput list | grep "$mouse" | sed 's/.*[ \t]*id=\([0-9]\+\)[ \t]*.*/\1/')"
+
+results=$(echo "$id" | sed '/^\s*$/d' | wc -l)
+if [ "$results" -ne 1 ]; then
+    echo "error: could not find $mouse"
+    exit 1
+fi
+
+state="$(xinput list-props $id | grep "$prop" | awk '{ print $6 }' | head -n 1)"
+case "$1" in
+    0) state=0 ;;
+    1) state=1 ;;
+    *) state="$(expr 1 - $state)" ;;
+esac
+echo "Setting '$prop' to $state ($mouse)"
+xinput set-prop "$id" "$prop" "$state"
+
