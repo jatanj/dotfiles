@@ -1,4 +1,5 @@
 #!/bin/bash
+
 if [ -z "$@" ]; then
     echo "error: no arguments"
     exit 1

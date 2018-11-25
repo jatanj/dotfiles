@@ -1,0 +1,9 @@
+class AddIdeaPlugin implements Plugin<Gradle> {
+    void apply(Gradle gradle) {
+        gradle.allprojects { project ->
+            project.apply plugin: 'idea'
+        }
+    }
+}
+
+apply plugin: AddIdeaPlugin

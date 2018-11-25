@@ -1,8 +1,9 @@
 #!/bin/bash
 
 launch_ec() {
-    args="$(echo "$1" | sed -r 's/\(.+\)/\"\0\"/g')"
-    eval "launch emacsclient $args"
+    args=$(echo "$1" | sed -r "s/\(.+\)/'\0'/g")
+    command="launch emacsclient $args"
+    eval $command
 }
 
 args="$@"

@@ -1,7 +1,12 @@
 #!/bin/bash
+
 if [ -z "$1" ]; then
     echo "error: no executable given"
     exit 1
 fi
-("$@" &> /dev/null &)
 
+command=$(echo "$@" | sed -r "s/\(.+\)/'\0'/g")
+# echo $command
+
+eval "($command &> /dev/null &)"
+# eval "($command &)"

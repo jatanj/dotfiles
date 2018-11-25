@@ -32,7 +32,7 @@ alias gpu-temp="watch -n 0 'nvidia-smi -q -d TEMPERATURE'"
 alias xm='xmodmap $HOME/.Xmodmap'
 
 # Pacman
-if command-exists pacman; then
+if command -v pacman > /dev/null 2>&1; then
     alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
     alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 fi
@@ -58,4 +58,3 @@ alias htop="TERM=screen /usr/bin/htop"
 
 # Disable terminal scroll lock
 stty -ixon
-
