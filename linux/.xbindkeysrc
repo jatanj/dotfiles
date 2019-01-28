@@ -14,6 +14,8 @@
 	Alt + backslash
 "jumpapp -c jetbrains-idea-ce idea"
 	Alt + o
+"jumpapp scrcpy"
+  Alt + comma
 "rofi-show"
   Mod4 + Super_R + s
 "nautilus"
