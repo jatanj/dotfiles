@@ -6,7 +6,9 @@ if command -v gnome-keyring-daemon > /dev/null 2>&1; then
 fi
 export SSH_AUTH_SOCK
 
-xset r rate 250 50
+if xset q > /dev/null 2>&1; then
+  xset r rate 250 50
+fi
 if command -v xmodmap > /dev/null 2>&1; then
   xmodmap $HOME/.Xmodmap > /dev/null 2>&1 
 fi

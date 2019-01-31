@@ -18,10 +18,10 @@ SPACESHIP_BATTERY_SHOW=false
 
 source $ZSH/oh-my-zsh.sh
 
-export TERM=xterm-256color
+export TERM=xterm-24bit
 export EDITOR=vim
-export VISUAL="env TERM=xterm-24bit emacsclient -nw"
-export SUDO_EDITOR="env TERM=xterm-24bit emacsclient -nw"
+export VISUAL=vim
+export SUDO_EDITOR=vim
 
 alias desktop='cd ~/Desktop'
 alias develop='cd ~/develop'
@@ -30,6 +30,9 @@ alias scratch='cd ~/scratch'
 alias cpu-temp="watch -n 0 'sensors'"
 alias gpu-temp="watch -n 0 'nvidia-smi -q -d TEMPERATURE'"
 alias xm='xmodmap $HOME/.Xmodmap'
+
+# Emacs
+alias el="emacsclient -c -nw"
 
 # Pacman
 if command -v pacman > /dev/null 2>&1; then
