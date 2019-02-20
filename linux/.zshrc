@@ -19,7 +19,7 @@ SPACESHIP_BATTERY_SHOW=false
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
-export VISUAL=vim
+export VISUAL="emacsclient -c"
 export SUDO_EDITOR=vim
 
 alias desktop='cd ~/Desktop'
@@ -35,9 +35,6 @@ if command -v pacman > /dev/null 2>&1; then
     alias pacman-prune="sudo pacman -Rns $(pacman -Qtdq | paste -sd ' ')"
     alias pacman-recent="expac --timefmt='%Y-%m-%d %T' '%l\t%n' | sort | tail -n 20"
 fi
-
-# Emacs
-alias el="emacsclient -c -nw"
 
 # Git
 alias gs="git status -sb"

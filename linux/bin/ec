@@ -2,8 +2,7 @@
 
 launch_emacs() {
     args=$(echo "$1" | sed -r "s/\(.+\)/'\0'/g")
-    command="launch emacsclient $args"
-    eval $command
+    eval "launch emacsclient $args"
 }
 
 args="$@"
