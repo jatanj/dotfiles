@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [ "$#" -lt 1 ]; then
+    echo "usage: display-mode <mode>"
+    exit 1
+fi
+
+display_name=$(xrandr --query | sed 's/\([^ ]\+\) connected.\+/\1/;t;d')
+IFS=$'\n' read -d '' -r -a display <<< "$display_name"
+
+display_res=$(xrandr | grep \* | cut -d' ' -f4)
+IFS=$'\n' read -d '' -r -a res <<< "$display_res"
+
+if [ ${#display[@]} -lt 1 ]; then
+    echo "error: failed to get displays"
+    echo "error: display => ${display[@]}"
+    echo "error: res => ${res[@]}"
+    exit 1
+fi
+
+case "$1" in
+    "1")
+        xrandr --output "${display[0]}" --auto --output "${display[1]}" --off
+        ;;
+    "2")
+        xrandr --output "${display[0]}" --off --output "${display[1]}" --auto
+        ;;
+    "extend")
+        width_0=$(echo "${res[0]}" | sed 's/\([0-9]\+\)x\([0-9]\+\)/\1/')
+        xrandr \
+            --output "${display[0]}" --primary --auto --pos 0x0 \
+            --output "${display[1]}" --auto --pos "${width_0}x0"
+        ;;
+    *)
+        echo "unknown argument '$1'"
+        ;;
+esac
+
