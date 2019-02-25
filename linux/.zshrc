@@ -43,16 +43,12 @@ alias gl="git lg"
 git-toplevel() { cd $(git toplevel); }
 git-search() { git grep "$1" $(git rev-list --all) }
 
-# Gradle
-alias grb="gradle -x test clean build"
-alias gri="gradle -x test clean install"
-alias grd="gradle -x test clean deploy"
-alias grt="gradle clean test"
-alias grts="gradle clean test --tests"
 
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 export LS_COLORS="tw=01;30:ow=01;34;40"
+
+alias bat="bat --theme OneHalfDark"
 
 # VTE fix
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
