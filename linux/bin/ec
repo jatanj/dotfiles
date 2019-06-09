@@ -1,14 +1,13 @@
 #!/bin/bash
 
 launch_emacs() {
-    args=$(echo "$1" | sed -r "s/\(.+\)/'\0'/g")
+    args=$(echo "$1" | sed -r "s/\\(.+\\)/'\\0'/g")
     eval "launch emacsclient $args"
 }
 
-args="$@"
+args="$*"
 if ! pgrep -f "emacsclient -c" > /dev/null || [ ! -f "$1" ]; then
     args="-c $args"
 fi
 
 launch_emacs "$args"
-

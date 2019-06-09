@@ -1,10 +1,11 @@
 #!/bin/bash
-program="$1"
-if [[ $(pidof "$program" 2> /dev/null) ]]; then
-	jumpapp -t "$program" xfce4-terminal
-elif [[ ! -e $(which "$program" 2> /dev/null) ]]; then
+
+command="$1"
+if [[ $(pidof "$command" 2> /dev/null) ]]; then
+	jumpapp -t "$command" xfce4-terminal
+elif [[ ! -e $(command -v "$command" 2> /dev/null) ]]; then
 	xfce4-terminal "$@"
 else
 	shift
-	xfce4-terminal --title="$program" -e "$program" "$@"
+	xfce4-terminal --title="$command" -e "$command" "$@"
 fi

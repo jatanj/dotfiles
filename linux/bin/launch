@@ -1,12 +1,23 @@
 #!/bin/bash
 
-if [ -z "$1" ]; then
-    echo "error: no executable given"
+if [ "$#" -lt 1 ]; then
+    echo "usage: launch <command> [<arg>...]"
     exit 1
 fi
 
-command=$(echo "$@" | sed -r "s/\(.+\)/'\0'/g")
-# echo $command
+emacs=(emacs emacsclient magit)
+quote=false
+for c in "${emacs[@]}"; do
+    if [ "$c" = "$1" ]; then
+        quote=true
+        break
+    fi
+done
+
+if [ "$quote" = true ]; then
+    command=$(echo "$@" | sed -r "s/\\(.+\\)/'\\0'/g")
+else
+    command="$*"
+fi
 
 eval "($command &> /dev/null &)"
-# eval "($command &)"

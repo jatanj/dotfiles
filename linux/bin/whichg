@@ -1,6 +1,12 @@
 #!/bin/bash
-if ! /usr/bin/which "$1" > /dev/null 2>&1; then
+
+if [ "$#" -lt 1 ]; then
+    echo "usage: whichg <command>"
+fi
+
+if ! command -v "$1" > /dev/null 2>&1; then
   echo "error: command '$1' not found"
   exit 1;
 fi
-explorer "$(dirname "$(/usr/bin/which "$1")")"
+
+explorer "$(dirname "$(commnand -v "$1")")"

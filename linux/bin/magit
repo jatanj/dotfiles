@@ -1,7 +1,13 @@
 #!/bin/bash
-[[ -z "$1" ]] && dir="." || dir="$1"
+
+dir="$1"
+if [[ -z "$dir" ]]; then
+    dir="."
+fi
+
 args=""
 if ! pgrep -f "emacsclient -c" > /dev/null; then
     args="-c $args"
 fi
+
 (eval "emacsclient $args --eval '(magit-status \"$dir\")'" &> /dev/null &)

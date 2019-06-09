@@ -43,7 +43,6 @@ alias gl="git lg"
 git-toplevel() { cd $(git toplevel); }
 git-search() { git grep "$1" $(git rev-list --all) }
 
-
 export GTAGSCONF=/usr/local/share/gtags/gtags.conf
 export GTAGSLABEL=new-ctags
 export LS_COLORS="tw=01;30:ow=01;34;40"

@@ -9,7 +9,7 @@ if [[ ! -d "$dir" ]]; then
 fi
 
 if [[ -z "$name" ]]; then
-    launch $VISUAL "$dir/$org_name"
+    launch "$VISUAL" "$dir/$org_name"
 else
-    launch $VISUAL "$dir/$name"
+    launch "$VISUAL" "$dir/$name"
 fi
