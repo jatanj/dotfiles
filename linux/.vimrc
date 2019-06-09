@@ -64,6 +64,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set nomodeline
 
 nmap <C-g> <Esc>
 vmap <C-g> <Esc>
